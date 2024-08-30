@@ -1,0 +1,108 @@
+.lunbo {
+  margin-top: 50px;
+  width: 100%;
+  height: 600px;
+}
+.lunbo .inner {
+  position: relative;
+  margin: 0 auto;
+  width: 1300px;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #f4e8f2;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.lunbo .inner .img {
+  position: absolute;
+  margin-top: 100px;
+  width: 600px;
+  height: 400px;
+  transition: 0.5s;
+}
+.lunbo .inner .img img {
+  width: 600px;
+  height: 400px;
+  border: 10px solid pink;
+  border-radius: 25px;
+}
+.lunbo .inner #last {
+  transform: scale(0.8) translateX(0);
+  z-index: 8;
+}
+.lunbo .inner #first {
+  transform: translateX(347px) scale(1);
+  z-index: 9;
+  opacity: 1;
+}
+.lunbo .inner #second {
+  transform: scale(0.8) translateX(877px);
+}
+.lunbo .inner #left {
+  transform: scale(0.8) translateX(150px);
+  z-index: 7;
+}
+.lunbo .inner #right {
+  transform: scale(0.8) translateX(300px);
+  z-index: 7;
+}
+.lunbo .inner .dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 40px;
+}
+.lunbo .inner .dots i {
+  width: 20px;
+  height: 20px;
+  background-color: skyblue;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.lunbo .inner .dots .active {
+  background-color: tomato;
+}
+.lunbo .inner .lbtn {
+  text-align: center;
+  line-height: 100px;
+  font-size: 50px;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 100px;
+  width: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  transition: all 0.3s;
+}
+.lunbo .inner .lbtn:hover {
+  color: tomato;
+  border-radius: 0 100px 100px 0;
+}
+.lunbo .inner .rbtn {
+  text-align: center;
+  line-height: 100px;
+  font-size: 50px;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  height: 100px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 20px 0 0 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+.lunbo .inner .rbtn:hover {
+  color: tomato;
+  border-radius: 100px 0 0 100px;
+}

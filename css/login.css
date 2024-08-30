@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2029;
+}
+.video {
+  width: 100%;
+  height: 100%;
+}
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  perspective: 1000px;
+}
+.top {
+  width: 300px;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+.top .off,
+.top .on {
+  color: #fff;
+  transition: 0.5s;
+  font: 300 20px '';
+}
+.top .on {
+  opacity: 0.5;
+}
+.top .button {
+  width: 60px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  position: relative;
+}
+.top .ball {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #2e2d38;
+  border-radius: 50%;
+  transition: 0.5s;
+  box-shadow: 0 0 10px #000;
+  left: 0;
+}
+.bottom {
+  width: 300px;
+  height: 250px;
+  background-image: url(../images/10001.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  transform-style: preserve-3d;
+  position: relative;
+  transition: 0.7s;
+  border-radius: 5px;
+}
+.bottom > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.bottom > div input {
+  width: 200px;
+  height: 25px;
+  padding: 0 10px;
+  background-color: #1f2029;
+  color: #fff;
+  outline: none;
+}
+.bottom > div button {
+  width: 80px;
+  height: 30px;
+  color: #333;
+  font-size: 15px;
+  background-color: #ffeba7;
+  border-radius: 4px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffeba7;
+  border: none;
+}
+.bottom .signIn {
+  transform: translateZ(70px);
+}
+.bottom .signIn h2 {
+  color: white;
+}
+.bottom .signUp {
+  position: absolute;
+  top: 0;
+  transform: translateZ(-70px) rotateY(180deg);
+}
+.bottom .signUp h2 {
+  color: white;
+}

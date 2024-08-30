@@ -1,0 +1,86 @@
+.tuwentoggle {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+
+    .container {
+        width: 1300px;
+        margin: 0 auto;
+        columns: 4;
+        column-gap: 20px;
+        background-color: rgb(40, 40, 35);
+
+        .box {
+            position: relative;
+            width: 100%;
+            margin: 0 0 20px;
+            padding: 10px;
+            background-color: #f4e8f2;
+            overflow: hidden;
+            break-inside: avoid;
+
+
+            img {
+                max-width: 100%;
+            }
+
+            h2 {
+                margin: 10px 0 0;
+                padding: 0 0 10px;
+                font-size: 20px;
+            }
+
+            p {
+                margin: 0;
+                padding: 0 0 10px;
+                font-size: 16px;
+            }
+
+            .content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 10px;
+                opacity: 0;
+                z-index: 11;
+                // background-color: pink;
+                transition: all .5s;
+            }
+
+            .toggle {
+                text-align: center;
+                line-height: 25px;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                font-size: 30px;
+                border-radius: 50%;
+                // pointer-events: none;
+                background-color: pink;
+                cursor: pointer;
+                z-index: 10;
+                transition: all .5s;
+                // box-shadow: 0 0 0 150px pink inset;
+                box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7);
+
+                // &:hover {
+                //     transform: rotate(360deg);
+                // }
+
+            }
+
+        }
+
+
+    }
+}
+
+@media (max-width: 960px) {
+    .tuwentoggle .container {
+        columns: 2;
+        width: calc(100% - 20px);
+        padding: 20px 20px 20px 0;
+    }
+}

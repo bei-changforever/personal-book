@@ -1,0 +1,391 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  height: 200vh;
+  overflow-x: hidden;
+  background-color: black;
+  perspective: 800px;
+  vertical-align: bottom;
+}
+ul li {
+  list-style: none;
+}
+header {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+}
+header .container .logo {
+  flex: 1;
+}
+header .container .logo img {
+  width: 100px;
+  height: 50px;
+}
+header .container .login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+header .container .login a {
+  position: relative;
+  display: block;
+  margin-left: 20px;
+  margin-right: 5px;
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+header .container .login a:nth-child(1):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid pink;
+  border-left: 2px solid pink;
+  transition: all 0.5s;
+}
+header .container .login a:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid pink;
+  border-right: 2px solid pink;
+  transition: all 0.5s;
+}
+header .container .login a:nth-child(2):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+  transition: all 0.5s;
+}
+header .container .login a:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #21ebff;
+  border-right: 2px solid #21ebff;
+  transition: all 0.5s;
+}
+header .container .login a:hover::after {
+  width: 100%;
+  height: 100%;
+}
+header .container .login a:hover::before {
+  width: 100%;
+  height: 100%;
+}
+header .container .login .login-btn:hover {
+  background-color: pink;
+  color: black;
+  transition-delay: 0.5s;
+  box-shadow: 0 0 50px pink;
+}
+header .container .login .register-btn:hover {
+  background-color: #21ebff;
+  color: black;
+  transition-delay: 0.5s;
+  box-shadow: 0 0 50px #21ebff;
+}
+.background {
+  height: 200vh;
+  background-image: url(../images/挪威.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  font: 900 15rem "";
+  text-align: center;
+  line-height: 160vh;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 20px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: inherit;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: -9;
+}
+.swiper {
+  position: absolute;
+  display: flex;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 500px;
+  opacity: 1;
+}
+.swiper .btn-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2);
+}
+.swiper .btn-box .swiper-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  /* 设置id样式 */
+}
+.swiper .btn-box .swiper-box .img {
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  transition: all 0.5s;
+}
+.swiper .btn-box .swiper-box .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 25px;
+}
+.swiper .btn-box .swiper-box .img video {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.swiper .btn-box .swiper-box #left {
+  transform: translateX(-200px) scale(0.8);
+  z-index: 0;
+}
+.swiper .btn-box .swiper-box #center {
+  transform: translateX(0) translateZ(200px) scale(1);
+  z-index: 9;
+}
+.swiper .btn-box .swiper-box #right {
+  transform: translateX(200px) scale(0.8);
+  z-index: 0;
+}
+.swiper .btn-box .swiper-last-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0.5;
+}
+.swiper .btn-box .swiper-next-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0.5;
+}
+.swiper .btn-box .dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 30px;
+}
+.swiper .btn-box .dots i {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(211, 211, 211, 0.5);
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.swiper .btn-box .dots .active {
+  box-shadow: 0 0 20px gray, 0 0 20px lightgoldenrodyellow;
+  border: 2px solid lightgreen;
+}
+section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 900px;
+}
+section .container {
+  width: 1300px;
+  height: auto;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2);
+}
+section .container .tab {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+}
+section .container .tab .tab-left {
+  border-radius: 25px;
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+section .container .tab .tab-left img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px 0 0 25px;
+  transition: all 0.5s;
+  opacity: 0;
+}
+section .container .tab .tab-left .imgactive {
+  transform: translateX(0px);
+  opacity: 1;
+}
+section .container .tab .tab-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+section .container .tab .tab-right .title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+  overflow: hidden;
+  transition: all 0.5s;
+  opacity: 0;
+}
+section .container .tab .tab-right .title h1 {
+  font-size: 50px;
+  color: turquoise;
+}
+section .container .tab .tab-right .topic {
+  position: absolute;
+  top: 100px;
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+section .container .tab .tab-right .topic h2 {
+  font-size: 30px;
+  color: tomato;
+}
+section .container .tab .tab-right .page {
+  position: absolute;
+  top: 250px;
+  flex: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+section .container .tab .tab-right .active {
+  display: block;
+  opacity: 1;
+}
+section .container .tab .tab-right .page-btn {
+  position: absolute;
+  bottom: 100px;
+  right: 150px;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .container .tab .tab-right .page-btn p {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  transition: 0.5s;
+  cursor: pointer;
+  flex: 1;
+  margin-left: 100px;
+}
+section .container .tab .tab-right .page-btn p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: none;
+  width: 100px;
+  height: 4px;
+  background-color: burlywood;
+  transition: 0.5s;
+}
+section .container .tab .tab-right .page-btn p:hover::after {
+  display: block;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

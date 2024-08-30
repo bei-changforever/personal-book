@@ -1,0 +1,218 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    height: 100px;
+    /* background-color: pink; */
+    border-bottom: 3px solid gray;
+}
+.header .logo {
+    padding-top: 40px;
+}
+.area_head {
+    height: 50px;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+    line-height: 50px;
+}
+.fr {
+    float: right;
+}
+.fl {
+    float: left;
+}
+.fl h4 {
+    font-size: 18px;
+    padding-left: 20px;
+}
+.fr p {
+    font-size: 14px;
+    padding-right: 20px;
+}
+.area {
+    height: 600px;
+    border: 1px solid #f1f1f1;
+}
+.register {
+    width: 520px;
+    
+    /* background-color: pink; */
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.register ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+.register ul li .inp {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #f1f1f1;
+}
+.register ul li .error {
+    color: red;
+}
+.register ul li {
+    margin-top: 30px;
+}
+.success {
+    color: green;
+}
+.register .check {
+    text-align: center;
+    margin-top: 20px;
+}
+/* .register ul .btn {
+    width: 250px;
+    height: 50px;
+    background-color: #b1191a;
+    color: #fff;
+    border: 0;
+    margin-top: 30px;
+    margin-left: 100px;
+} */
+.safe {
+    padding-left:  175px;
+}
+.safe em {
+    padding: 0 20px;
+    background-color: skyblue;
+    color: #fff;
+    
+}
+.safe .ruo {
+    background-color: red;
+}
+.safe .zhong {
+    background-color: sandybrown;
+}
+.safe .qiang {
+    background-color: seagreen;
+}
+.agree input {
+    vertical-align: middle;
+}
+.agree {
+    padding-left: 100px;
+}
+.agree a {
+    color: #1ba1e6;
+}
+.btn input {
+    width: 200px;
+    height: 34px;
+    background-color: #c81623;
+    border: 0;
+    color: #fff;
+}
+.btn {
+    padding-left: 100px;
+}
+.footer {
+    margin-top: 100px;
+    background-color: #f5f5f5;
+    /* position: absolute; */
+    /* bottom: 0; */
+    height: 415px;
+    padding-top: 30px;
+    /* background-color: pink; */
+}
+.footer .mod_service {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+}
+.footer .mod_service ul li h5 {
+    font-size: 14px;
+    font-weight: 700;
+}
+.footer .mod_service ul li {
+    width: 200px;
+    height: 50px;
+    float: left;
+    padding-left: 35px;
+}
+.footer .mod_service ul li .mod1 {
+    float: left;
+    width: 57px;
+    height: 53px;
+    background: url(../images/icons.png) no-repeat -249px 0;
+}
+.footer .mod_service ul li .mod1_1 {
+    margin-top: 10px;
+}
+.footer .mod_service ul li .mod2 {
+    float: left;
+    width: 57px;
+    height: 53px;
+    background: url(../images/icons.png) no-repeat -254px -52px;
+}
+.footer .mod_service ul li .mod2_2 {
+    margin-top: 10px;
+}
+.footer .mod_service ul li .mod3 {
+    float: left;
+    width: 57px;
+    height: 53px;
+    background: url(../images/icons.png) no-repeat -255px -104px;
+}
+.footer .mod_service ul li .mod3_3 {
+    margin-top: 10px;
+}
+.footer .mod_service ul li .mod4 {
+    float: left;
+    width: 57px;
+    height: 53px;
+    background: url(../images/icons.png) no-repeat -258px -155px;
+}
+.footer .mod_service ul li .mod4_4 {
+    margin-top: 10px;
+}
+.footer .mod_service ul li .mod5 {
+    float: left;
+    width: 57px;
+    height: 53px;
+    background: url(../images/icons.png) no-repeat -257px -208px;
+}
+.footer .mod_service ul li .mod5_5 {
+    margin-top: 10px;
+}
+.more_help {
+    height: 200px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+.more_help dl {
+    float: left;
+    width: 190px;
+    height: 190px;
+}
+.more_help dl dt {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.more_help dl dt dd a {
+    margin-bottom: 10px;
+}
+.more_help dl:last-child {
+    width: 90px;
+    text-align: center;
+}
+.more_copyright {
+    float: left;
+    padding-top: 20px;
+    text-align: center;
+}
+.more_copyright .links {
+  margin-bottom: 15px;
+}
+.links a {
+    margin: 0 3px;
+}
+.copyright {
+    text-align: center;
+    line-height: 20px;
+}
+
